@@ -7,12 +7,13 @@ from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
 from langchain.prompts import ChatPromptTemplate
+from flask_cors import CORS
 import time
 from dotenv import load_dotenv
 
 
 app = Flask(__name__)
-
+CORS(app)
 load_dotenv()
 
 groq_api_key = "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"
