@@ -23,7 +23,7 @@ embeddings = CohereEmbeddings(
     cohere_api_key=cohere_api_key,
     model="embed-english-v3.0"  # You can change this to another appropriate model
 )
-loader = PyPDFLoader("files/result.pdf")
+loader = PyPDFLoader("./files/result.pdf")
 docs = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
